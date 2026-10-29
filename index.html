@@ -1,0 +1,504 @@
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aroma Opita: café del Huila, bebidas artesanales y sabores de nuestra región.">
+  <title>Aroma Opita | Café del Huila</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    @theme {
+      --color-crema: #FAF6F0;
+      --color-cafe: #3E2723;
+      --color-caramelo: #B86F3C;
+      --color-acento: #E07A2E;
+      --color-exito: #167A45;
+      --color-error: #B42318;
+      --color-aviso: #8A4B08;
+      --font-display: "Playfair Display", Georgia, serif;
+      --font-sans: "DM Sans", Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+    }
+
+    .focus-ring:focus-visible {
+      outline: 3px solid #E07A2E;
+      outline-offset: 3px;
+    }
+
+    .dark body {
+      background: #171412;
+      color: #FAF6F0;
+    }
+  </style>
+</head>
+
+<body class="bg-crema text-cafe antialiased">
+
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:p-3">
+    Saltar al contenido
+  </a>
+
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <header class="sticky top-0 z-40 border-b border-cafe/10 bg-crema/95 backdrop-blur dark:bg-stone-900/95">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4" aria-label="Navegación principal">
+
+      <a href="#inicio" class="focus-ring rounded text-xl font-bold tracking-wide">
+        ☕ Aroma <span class="text-acento">Opita</span>
+      </a>
+
+      
+<div class="hidden items-center gap-7 md:flex">
+  <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#nosotros">Nuestra historia</a>
+  <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#menu">Menú</a>
+  <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#preguntas">Preguntas</a>
+  <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#contacto">Contacto</a>
+</div>
+
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle"
+          class="focus-ring rounded-full border border-cafe/20 px-3 py-2 text-sm hover:bg-cafe hover:text-white dark:border-stone-500"
+          type="button"
+          aria-label="Cambiar entre modo claro y oscuro"
+          aria-pressed="false">
+          ☾ Tema
+        </button>
+
+        <button id="menu-toggle"
+          class="focus-ring rounded-lg border border-cafe/20 px-3 py-2 md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menú">
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden border-t border-cafe/10 px-5 pb-4 md:hidden">
+      <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#nosotros">Nuestra historia</a>
+      <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#menu">Menú</a>
+      <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#preguntas">Preguntas</a>
+      <a class="focus-ring rounded transition-colors duration-200 hover:text-acento hover:underline" href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- INICIO -->
+    <section id="inicio" class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-24">
+      <div>
+        <p class="mb-4 font-semibold uppercase tracking-[.2em] text-caramelo">
+          Un sabor nacido en el Huila
+        </p>
+
+        <h1 class="mb-6 text-5xl font-bold leading-tight sm:text-6xl">
+          Cada taza cuenta una <span class="text-acento">historia.</span>
+        </h1>
+
+        <p class="mb-8 max-w-xl text-lg leading-8 text-cafe/80 dark:text-stone-200">
+          Descubre el aroma del café huilense, preparado con cariño y acompañado de sabores que nos conectan con nuestra tierra.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#menu" class="focus-ring rounded-full bg-cafe px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-caramelo">
+            Explorar menú
+          </a>
+
+          <a href="#contacto" class="focus-ring rounded-full border-2 border-cafe px-6 py-3 font-semibold transition hover:bg-cafe hover:text-white dark:border-stone-300">
+            Contáctanos
+          </a>
+        </div>
+
+        <p class="mt-6 text-sm text-cafe/70 dark:text-stone-300">
+          Café de origen · Preparación artesanal · Espíritu opita
+        </p>
+      </div>
+
+      <div class="overflow-hidden rounded-[2rem] shadow-xl">
+        <img class="h-[360px] w-full object-cover md:h-[480px]"
+          src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85"
+          alt="Taza de café servida en una mesa de cafetería">
+      </div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section id="nosotros" class="bg-white py-16 dark:bg-stone-800">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2">
+
+        <img class="h-72 w-full rounded-3xl object-cover shadow-md"
+          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=85"
+          alt="Granos de café y utensilios para preparar una bebida">
+
+        <div>
+          <p class="mb-2 font-semibold uppercase tracking-widest text-caramelo">Nuestra historia</p>
+
+          <h2 class="mb-5 text-3xl font-bold sm:text-4xl">
+            Tradición que se disfruta despacio
+          </h2>
+
+          <p class="mb-4 leading-7 text-cafe/80 dark:text-stone-200">
+            Aroma Opita es una propuesta ficticia inspirada en la cultura cafetera del Huila. Queremos ofrecer un espacio cálido donde cada persona pueda descubrir bebidas preparadas con cuidado y conocer un poco más de nuestra región.
+          </p>
+
+          <p class="leading-7 text-cafe/80 dark:text-stone-200">
+            Creemos en los pequeños detalles: ingredientes seleccionados, atención cercana y una experiencia sencilla desde el primer clic hasta el último sorbo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ -->
+    <section id="menu" class="mx-auto max-w-7xl px-5 py-16">
+      <div class="mb-10 text-center">
+        <p class="mb-2 font-semibold uppercase tracking-widest text-caramelo">Nuestros favoritos</p>
+
+        <h2 class="text-3xl font-bold sm:text-4xl">Un menú para disfrutar</h2>
+
+        <p class="mx-auto mt-3 max-w-2xl text-cafe/75 dark:text-stone-200">
+          Opciones de ejemplo para mostrar cómo se organiza un catálogo en tarjetas.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl dark:bg-stone-800">
+          <img class="h-48 w-full object-cover"
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+            alt="Café negro servido en una taza">
+
+          <div class="p-6">
+            <h3 class="mb-2 text-2xl font-bold">Café de origen</h3>
+            <p class="mb-4 leading-6 text-cafe/75 dark:text-stone-200">
+              Una taza aromática con notas suaves y sabor equilibrado.
+            </p>
+            <p class="font-bold text-acento">$5.000 COP</p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl dark:bg-stone-800">
+          <img class="h-48 w-full object-cover transition-transform duration-300 hover:scale-105"
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80"
+            alt="Café con leche en un vaso">
+
+          <div class="p-6">
+            <h3 class="mb-2 text-2xl font-bold">Latte cremoso</h3>
+            <p class="mb-4 leading-6 text-cafe/75 dark:text-stone-200">
+              Espresso con leche texturizada, ideal para una pausa.
+            </p>
+            <p class="font-bold text-acento">$7.500 COP</p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl dark:bg-stone-800">
+          <img class="h-48 w-full object-cover"
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80"
+            alt="Pan artesanal recién horneado">
+
+          <div class="p-6">
+            <h3 class="mb-2 text-2xl font-bold">Pan artesanal</h3>
+            <p class="mb-4 leading-6 text-cafe/75 dark:text-stone-200">
+              Un acompañamiento sencillo para compartir con café.
+            </p>
+            <p class="font-bold text-acento">$4.000 COP</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+   
+<section class="bg-cafe py-14 text-white">
+  <div class="mx-auto grid max-w-7xl gap-8 px-5 text-center sm:grid-cols-3">
+    <div>
+      <h2 class="text-3xl font-bold text-orange-300">Origen</h2>
+      <p class="mt-2 text-white/80">Inspiración cafetera huilense</p>
+    </div>
+
+    <div>
+      <h2 class="text-3xl font-bold text-orange-300">Cuidado</h2>
+      <p class="mt-2 text-white/80">Preparación con atención al detalle</p>
+    </div>
+
+    <div>
+      <h2 class="text-3xl font-bold text-orange-300">Cercanía</h2>
+      <p class="mt-2 text-white/80">Una experiencia amable para todos</p>
+    </div>
+  </div>
+</section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section id="preguntas" class="mx-auto max-w-4xl px-5 py-16 text-cafe dark:text-stone-100">
+      <div class="mb-8 text-center">
+        <p class="mb-2 font-semibold uppercase tracking-widest text-caramelo">
+          Resolvemos tus dudas
+        </p>
+        <h2 class="text-3xl font-bold sm:text-4xl">Preguntas frecuentes</h2>
+      </div>
+
+      <div class="space-y-3">
+
+        <div class="rounded-2xl border border-cafe/15 bg-white dark:border-stone-600 dark:bg-stone-800">
+          <button type="button" class="faq-button focus-ring flex w-full items-center justify-between rounded-2xl p-5 text-left font-semibold text-cafe dark:text-stone-100" aria-expanded="false">
+            <span>¿Dónde está inspirada Aroma Opita?</span>
+            <span aria-hidden="true">＋</span>
+          </button>
+          <p class="faq-answer hidden px-5 pb-5 leading-6 text-cafe dark:text-stone-100">
+            Es una propuesta académica ficticia inspirada en la cultura cafetera del Huila.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-cafe/15 bg-white dark:border-stone-600 dark:bg-stone-800">
+          <button type="button" class="faq-button focus-ring flex w-full items-center justify-between rounded-2xl p-5 text-left font-semibold text-cafe dark:text-stone-100" aria-expanded="false">
+            <span>¿Los precios son reales?</span>
+            <span aria-hidden="true">＋</span>
+          </button>
+          <p class="faq-answer hidden px-5 pb-5 leading-6 text-cafe dark:text-stone-100">
+            No. Los precios se usan como ejemplo y deben actualizarse si el proyecto se convierte en un negocio real.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-cafe/15 bg-white dark:border-stone-600 dark:bg-stone-800">
+          <button type="button" class="faq-button focus-ring flex w-full items-center justify-between rounded-2xl p-5 text-left font-semibold text-cafe dark:text-stone-100" aria-expanded="false">
+            <span>¿Puedo enviar una consulta?</span>
+            <span aria-hidden="true">＋</span>
+          </button>
+          <p class="faq-answer hidden px-5 pb-5 leading-6 text-cafe dark:text-stone-100">
+            Sí. Usa el formulario de contacto; en esta demostración el mensaje se valida en el navegador y no se envía a un servidor.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-cafe/15 bg-white dark:border-stone-600 dark:bg-stone-800">
+          <button type="button" class="faq-button focus-ring flex w-full items-center justify-between rounded-2xl p-5 text-left font-semibold text-cafe dark:text-stone-100" aria-expanded="false">
+            <span>¿La página funciona en celular?</span>
+            <span aria-hidden="true">＋</span>
+          </button>
+          <p class="faq-answer hidden px-5 pb-5 leading-6 text-cafe dark:text-stone-100">
+            El diseño usa clases responsive para adaptar columnas y navegación a diferentes tamaños de pantalla.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="bg-white py-16 text-cafe dark:bg-stone-800 dark:text-stone-100">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-2">
+
+        <div>
+          <p class="mb-2 font-semibold uppercase tracking-widest text-caramelo">Hablemos</p>
+
+          <h2 class="mb-4 text-3xl font-bold sm:text-4xl">
+            ¿Te antojas de una buena taza?
+          </h2>
+
+          <p class="mb-5 leading-7 text-cafe/80 dark:text-stone-200">
+            Déjanos tus datos y tu consulta. Este formulario es demostrativo: no almacena ni transmite información.
+          </p>
+
+          <p class="text-sm text-cafe/70 dark:text-stone-300">
+            Correo de ejemplo: hola@aromaopita.example
+          </p>
+        </div>
+
+        <form id="contact-form" novalidate class="rounded-3xl border border-cafe/10 bg-crema p-6 text-cafe shadow-sm dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100">
+
+          <div class="mb-4">
+            <label for="nombre" class="mb-2 block font-semibold">Nombre *</label>
+            <input id="nombre" name="nombre" autocomplete="name" required
+              class="focus-ring w-full rounded-xl border border-cafe/25 bg-white px-4 py-3 text-cafe"
+              aria-describedby="nombre-error">
+            <p id="nombre-error" class="mt-1 hidden text-sm text-error"></p>
+          </div>
+
+          <div class="mb-4">
+            <label for="correo" class="mb-2 block font-semibold">Correo electrónico *</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" required
+              class="focus-ring w-full rounded-xl border border-cafe/25 bg-white px-4 py-3 text-cafe"
+              aria-describedby="correo-error">
+            <p id="correo-error" class="mt-1 hidden text-sm text-error"></p>
+          </div>
+
+          <div class="mb-4">
+            <label for="mensaje" class="mb-2 block font-semibold">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required
+              class="focus-ring w-full rounded-xl border border-cafe/25 bg-white px-4 py-3 text-cafe"
+              aria-describedby="mensaje-error"></textarea>
+            <p id="mensaje-error" class="mt-1 hidden text-sm text-error"></p>
+          </div>
+
+          <button type="submit" class="bg-cafe text-white rounded-lg px-6 py-3 transition-transform duration-200 hover:scale-105">
+            Enviar consulta
+          </button>
+
+          <p class="mt-3 text-xs text-cafe/70 dark:text-stone-300">
+            * Campos obligatorios.
+          </p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-cafe px-5 py-8 text-center text-white">
+    <p class="font-display text-xl font-bold">Aroma Opita</p>
+    <p class="mt-2 text-sm text-white/75">Proyecto académico de demostración · Huila, Colombia</p>
+    <p class="mt-3 text-xs text-white/60">
+      © <span id="year"></span> Aroma Opita. Imágenes de ejemplo desde Unsplash.
+    </p>
+  </footer>
+
+  <!-- MENSAJE DE CONFIRMACIÓN -->
+  <div id="toast" role="status" aria-live="polite"
+    class="fixed bottom-5 right-5 z-50 hidden max-w-sm rounded-xl bg-exito px-5 py-4 font-semibold text-white shadow-xl">
+    ¡Gracias! La validación fue correcta. Este formulario es solo una demostración.
+  </div>
+
+  <script>
+    // MENÚ PARA CELULARES
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+      mobileMenu.classList.toggle('hidden', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menú');
+      });
+    });
+
+    // MODO CLARO Y OSCURO
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', () => {
+      const dark = document.documentElement.classList.toggle('dark');
+
+      themeToggle.textContent = dark ? '☀ Tema' : '☾ Tema';
+      themeToggle.setAttribute('aria-pressed', String(dark));
+    });
+
+    // PREGUNTAS FRECUENTES
+    document.querySelectorAll('.faq-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const open = button.getAttribute('aria-expanded') === 'true';
+
+        button.setAttribute('aria-expanded', String(!open));
+        answer.classList.toggle('hidden', open);
+        button.lastElementChild.textContent = open ? '＋' : '−';
+      });
+    });
+
+    // VALIDACIÓN DEL FORMULARIO
+    const form = document.getElementById('contact-form');
+    const toast = document.getElementById('toast');
+    let toastTimer;
+
+    function showError(id, message) {
+      const field = document.getElementById(id);
+      const error = document.getElementById(id + '-error');
+
+      error.textContent = message;
+      error.classList.remove('hidden');
+      field.setAttribute('aria-invalid', 'true');
+    }
+
+    function clearError(id) {
+      const field = document.getElementById(id);
+      const error = document.getElementById(id + '-error');
+
+      error.textContent = '';
+      error.classList.add('hidden');
+      field.removeAttribute('aria-invalid');
+    }
+
+    ['nombre', 'correo', 'mensaje'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => clearError(id));
+    });
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+
+      ['nombre', 'correo', 'mensaje'].forEach(clearError);
+
+      let valid = true;
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      if (!nombre) {
+        showError('nombre', 'Escribe tu nombre.');
+        valid = false;
+      }
+
+      if (!correo) {
+        showError('correo', 'Escribe tu correo electrónico.');
+        valid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+        showError('correo', 'Escribe un correo válido, por ejemplo nombre@dominio.com.');
+        valid = false;
+      }
+
+      if (!mensaje) {
+        showError('mensaje', 'Escribe tu consulta.');
+        valid = false;
+      }
+
+      if (!valid) {
+        const firstInvalid = form.querySelector('[aria-invalid="true"]');
+
+        if (firstInvalid) {
+          firstInvalid.focus();
+        }
+
+        return;
+      }
+
+      toast.classList.remove('hidden');
+
+      clearTimeout(toastTimer);
+
+      toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4000);
+
+      form.reset();
+    });
+
+    // AÑO AUTOMÁTICO
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
