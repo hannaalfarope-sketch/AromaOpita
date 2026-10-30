@@ -63,3 +63,45 @@ Los siguientes registros resumen las necesidades y soluciones trabajadas durante
 - Prompt reconstruido: Agrega transiciones y efectos hover a los elementos de la página utilizando clases de Tailwind.
 - Resultado: funcionan los efectos de escala en el botón y las imágenes del menú, y el cambio de color en los enlaces.
 - Estado: Comprobado.
+  
+
+  ### PROMPT MAESTRO
+
+  ### 1. Rol
+
+Actúa como un desarrollador frontend experto en HTML, Tailwind CSS versión 4 y JavaScript, con conocimientos de diseño web, experiencia de usuario (UX) y diseño de interfaces (UI).
+
+### 2. Contexto
+
+Se necesita desarrollar una página web para una cafetería llamada **Aroma Opita**. El propósito es crear un sitio moderno, agradable y fácil de utilizar, que permita presentar la identidad de la cafetería, mostrar sus productos y ofrecer información de contacto a los visitantes.
+
+El diseño debe transmitir un ambiente cálido y acogedor, relacionado con la cultura cafetera.
+
+### 3. Tareas
+
+Desarrolla una página web que incluya las siguientes secciones y funcionalidades:
+
+1. **Barra de navegación:** incluir el nombre de la cafetería y enlaces para desplazarse por las diferentes secciones.
+2. **Inicio:** presentar la cafetería mediante un título llamativo, una descripción y una imagen principal.
+3. **Nuestra historia:** mostrar información sobre la cafetería y su identidad.
+4. **Menú:** presentar los productos mediante tarjetas con imágenes y nombres.
+5. **Preguntas frecuentes:** permitir que los usuarios desplieguen y oculten las respuestas.
+6. **Contacto:** incluir un formulario para ingresar información y mostrar mensajes de validación.
+7. **Pie de página:** presentar información adicional de la cafetería.
+
+También se deben incorporar un menú adaptable para celulares, un modo oscuro, interactividad en las preguntas frecuentes y notificaciones para el formulario.
+
+### 4. Restricciones y requisitos
+
+- Utilizar HTML, Tailwind CSS versión 4 mediante CDN y JavaScript.
+- Mantener todo el proyecto en un archivo principal llamado `index.html`.
+- Crear un diseño responsive que funcione en computadores, tabletas y celulares.
+- Utilizar una paleta de colores cálida y coherente con la identidad de Aroma Opita.
+- Mantener una buena organización visual y una tipografía legible.
+- Incluir textos alternativos en las imágenes y etiquetas en los campos del formulario.
+- Procurar un contraste adecuado y una navegación fácil de utilizar.
+- Evitar funcionalidades innecesarias y mantener el código comprensible.
+
+### Resultado esperado
+
+Entregar una página web funcional, visualmente atractiva y adaptable a diferentes dispositivos, que represente correctamente la cafetería Aroma Opita y cumpla con las características solicitadas.
